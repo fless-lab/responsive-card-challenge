@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header,footer{
+    position: sticky;
+    background-color: rgb(47, 47, 110);
+}
+
+header{
+    top: 0;
+    margin-bottom: 0;
+}
+
+header h1, footer p, nav ul{
+    padding: 5px 0; 
+
+}
+
+footer{
+    bottom: 0;
+}
+
+
+nav ul{
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: darkblue;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+main{
+    flex-grow: 1;
+    background: radial-gradient(transparent,red);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.card{
+    scroll-margin-top: 8rem;
+    border: 2px solid rgba(14, 11, 11, 0.473);
+    color: black;
+    background-color: rgb(199, 228, 233);
+    width: min(100%,350px);
+    border-radius: 10px;
+    padding: 1rem;
+    margin:1rem .5rem;
+}
+
+.card img{
+    margin: .5rem 0;
+    /* width: 200px; */
+    width: 100%;
+    border-radius: 50%;
+    border: 5px double grey;
+}
+
+/* Mobile en mode portait */
+@media screen and (max-height:425px) and (min-aspect-ratio:7/4){
+    h1{
+        font-size: 1.5rem;
+    }
+    nav{display: none;}
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .card{
+        width: min(calc(33%-.2rem),200px);
+    }
+}
+
+@media screen and (min-width:400px) {
+    main{
+        background: radial-gradient(transparent,green);
+    }
+}
+@media screen and (min-width:640px) {
+    main{
+        background: radial-gradient(transparent,blue);
+    }
+}
+@media screen and (min-width:720px) {
+    main{
+        background: radial-gradient(transparent,#f2398f);
+    }
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(calc(33%-1rem),400px);
+    }
+}
+@media screen and (min-width:920px) {
+    main{
+        background: radial-gradient(transparent,yellow);
+    }
+    .card{
+        width: min(calc(30%-1rem),400px);
+    }
+}
+@media screen and (min-width:1280px) {
+    main{
+        background: radial-gradient(transparent,purple);
+    }
+    .card{
+        width: min(calc(30%-1rem),500px);
+    }
+}
+@media screen and (min-width:1536px) {
+    main{
+        background: radial-gradient(transparent,darkgrey);
+    }
+}
+
